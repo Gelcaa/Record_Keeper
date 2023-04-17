@@ -22,8 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bike_heading"
-                android:contentDescription="@string/CyclingImage" />
+                android:src="@drawable/running_heading"
+                android:contentDescription="@string/running_image_description" />
 
             <View
                 android:layout_width="match_parent"
@@ -38,13 +38,13 @@
 
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:text="@string/Cycling"
+                android:text="@string/Running"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
 
         </FrameLayout>
-        
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -55,24 +55,24 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/container_longest_ride"
+                android:id="@+id/container_5km"
                 android:padding="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                
+
                 <TextView
-                    android:id="@+id/text_view_longest_ride_heading"
+                    android:id="@+id/text_view_5km_heading"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
-                    android:text="@string/longest_ride"
+                    android:text="@string/_5km"
                     android:textSize="20sp"
                     android:fontFamily="sans-serif"
                     android:textColor="?attr/colorPrimary"
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:id="@+id/text_view_longest_ride_value"
+                    android:id="@+id/text_view_5km_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -83,16 +83,16 @@
                     app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
-                    android:id="@+id/text_view_longest_ride_date"
+                    android:id="@+id/text_view_5km_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_longest_ride_value"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_5km_value"
                     app:layout_constraintEnd_toEndOf="parent"
                     tools:text="01/23/2023"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif-light"
                     android:textSize="16sp"/>
-                
+
 
 
 
@@ -105,51 +105,49 @@
                 android:background="@color/light_grey"
                 android:layout_marginTop="16dp"/>
 
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/container_10km"
-                android:padding="12dp"
-                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="12dp">
 
                 <TextView
-                    android:id="@+id/text_view_biggest_climb_heading"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/text_view_10km_heading"
                     android:layout_width="wrap_content"
-                    android:text="@string/biggest_climb"
-                    android:textSize="20sp"
+                    android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
+                    android:text="@string/_10km"
                     android:textColor="?attr/colorPrimary"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/text_view_biggest_climb_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:text="22.04"
-                    android:fontFamily="sans-serif-light"
                     android:textSize="20sp"
-                    android:textColor="@color/dark_grey"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/text_view_biggest_climb_date"
+                    android:id="@+id/text_view_10km_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_biggest_climb_value"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    tools:text="01/23/2023"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="22.04" />
+
+                <TextView
+                    android:id="@+id/text_view_10km_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif-light"
-                    android:textSize="16sp"/>
-
-
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_10km_value"
+                    tools:text="01/23/2023" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <View
                 android:layout_width="match_parent"
@@ -165,18 +163,18 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/text_view_average_speed_heading"
+                    android:id="@+id/text_view_half_marathon_heading"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
-                    android:text="@string/best_average_speed"
+                    android:text="@string/half_marathon"
                     android:textSize="20sp"
                     android:fontFamily="sans-serif"
                     android:textColor="?attr/colorPrimary"
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:id="@+id/text_view_average_speed_value"
+                    android:id="@+id/text_view_half_marathon_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -187,10 +185,10 @@
                     app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
-                    android:id="@+id/text_view_average_speed_date"
+                    android:id="@+id/text_view_half_marathon_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_average_speed_value"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_half_marathon_value"
                     app:layout_constraintEnd_toEndOf="parent"
                     tools:text="01/23/2023"
                     android:layout_marginTop="16dp"
@@ -203,8 +201,55 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey"
+                android:layout_marginTop="16dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="16dp"
+                android:id="@+id/container_marathon"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_view_marathon_heading"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:text="@string/marathon"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/text_view_marathon_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="22.04"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_grey"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_view_marathon_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_marathon_value"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="01/23/2023"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="16sp"/>
 
 
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
