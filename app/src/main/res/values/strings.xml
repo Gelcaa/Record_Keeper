@@ -15,4 +15,7 @@
     <string name="longest_ride">Longest Ride</string>
     <string name="biggest_climb">Biggest Climb</string>
     <string name="best_average_speed">Best Average Speed</string>
+    <string name="reset_running_records">Reset Running Records</string>
+    <string name="reset_cycling_records">Reset Cycling Records</string>
+    <string name="reset_all_records">Reset All Records</string>
 </resources>
