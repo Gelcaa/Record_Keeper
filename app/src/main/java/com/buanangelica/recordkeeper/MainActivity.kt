@@ -3,14 +3,14 @@ package com.buanangelica.recordkeeper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.AdapterView.OnItemSelectedListener
 import androidx.fragment.app.commit
 import com.buanangelica.recordkeeper.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
-@Suppress("DEPRECATION")
- class MainActivity : AppCompatActivity(),
-    BottomNavigationView.OnNavigationItemSelectedListener {
+
+ class MainActivity : AppCompatActivity(), com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener{
 
     private lateinit var binding: ActivityMainBinding
 
@@ -23,36 +23,30 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 
-        binding.bottomNav.setOnNavigationItemSelectedListener(this)
+        binding.bottomNav.setOnItemSelectedListener(this)
 
 
     }
 
-    private fun onCyclingClicked() {
+    private fun onCyclingClicked(): Boolean {
         supportFragmentManager.commit {
             replace(R.id.frame_content, CyclingFragment())
         }
+        return true
     }
 
-    private fun onRunningClicked() {
+    private fun onRunningClicked(): Boolean {
         supportFragmentManager.commit {
             replace(R.id.frame_content, RunningFragment())
         }
+        return true
     }
 
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.nav_cycling -> {
-                onCyclingClicked()
-                true
-            }
-            R.id.nav_running -> {
-                onRunningClicked()
-                true
-            }
-            else ->
-                false
+    override fun onNavigationItemSelected(item: MenuItem) =  when (item.itemId) {
+            R.id.nav_cycling ->  onCyclingClicked()
+            R.id.nav_running -> onRunningClicked()
+            else -> false
 
         }
     }
