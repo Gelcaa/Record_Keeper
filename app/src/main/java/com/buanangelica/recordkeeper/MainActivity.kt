@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.commit
+import com.buanangelica.recordkeeper.cycling.CyclingFragment
 import com.buanangelica.recordkeeper.databinding.ActivityMainBinding
+import com.buanangelica.recordkeeper.running.RunningFragment
 
 import com.google.android.material.navigation.NavigationBarView
 

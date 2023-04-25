@@ -1,4 +1,4 @@
-package com.buanangelica.recordkeeper
+package com.buanangelica.recordkeeper.cycling
 
 import android.content.Intent
 import android.os.Bundle

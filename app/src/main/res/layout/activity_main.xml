@@ -8,7 +8,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         tools:layout="@layout/fragment_cycling"
-        android:name="com.buanangelica.recordkeeper.RunningFragment"
+        android:name="com.buanangelica.recordkeeper.running.RunningFragment"
         android:id="@+id/frame_content"
         android:layout_width="0dp"
         android:layout_height="0dp"

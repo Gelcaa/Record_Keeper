@@ -4,13 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditRunningRecordActivity">
+    android:padding="24dp"
+    tools:context=".running.EditRunningRecordActivity">
 
-    <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Record edits"
-        android:layout_width="wrap_content"
+<com.google.android.material.textfield.TextInputLayout
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/text_input_record"
+    android:hint="@string/record_hint"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_text_record"
+        android:layout_width="match_parent"
+        android:text="24:15"
         android:layout_height="wrap_content"/>
+</com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@id/text_input_record"
+        android:layout_marginTop="24dp"
+        android:id="@+id/text_input_date"
+        android:hint="@string/date_hint"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_date"
+            android:layout_width="match_parent"
+            android:text="23rd January 2023"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_buttong_text"
+        android:id="@+id/button_save"
+        app:layout_constraintTop_toBottomOf="@id/text_input_date"
+        android:layout_marginTop="48dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_record_button_text"
+        android:id="@+id/button_delete"
+        app:layout_constraintTop_toBottomOf="@id/button_save"
+        android:layout_marginTop="12dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
