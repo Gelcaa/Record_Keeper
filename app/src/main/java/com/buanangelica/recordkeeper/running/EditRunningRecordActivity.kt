@@ -1,9 +1,9 @@
 package com.buanangelica.recordkeeper.running
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.edit
-import androidx.preference.PreferenceManager
 import com.buanangelica.recordkeeper.databinding.ActivityEditRunningRecordBinding
 
 
@@ -18,10 +18,21 @@ class EditRunningRecordActivity : AppCompatActivity() {
         val distance = intent.getStringExtra("Distance")
         title = "$distance Record"
 
-        val applicationPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+       binding.buttonSave.setOnClickListener {
+           saveRecord(distance)
+       }
+    }
 
-        applicationPreferences.edit {
-            putString("application data","Preference value" )
+    private fun saveRecord(distance: String?) {
+        val record = binding.editTextRecord.text.toString()
+        val date = binding.editTextDate.text.toString()
+
+        val runningPreferences = getSharedPreferences("running", Context.MODE_PRIVATE)
+
+        runningPreferences.edit{
+            putString("$distance record", record)
+            putString("$distance date", date)
         }
+
     }
 }
