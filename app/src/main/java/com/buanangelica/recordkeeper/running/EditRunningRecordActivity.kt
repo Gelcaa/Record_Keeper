@@ -18,9 +18,18 @@ class EditRunningRecordActivity : AppCompatActivity() {
         val distance = intent.getStringExtra("Distance")
         title = "$distance Record"
 
+        displayRecord(distance)
        binding.buttonSave.setOnClickListener {
            saveRecord(distance)
+           finish()
        }
+    }
+
+    private fun displayRecord(distance: String?) {
+        val runningPreferences = getSharedPreferences("running", Context.MODE_PRIVATE)
+
+        binding.editTextRecord.setText(runningPreferences.getString("$distance record", null))
+        binding.editTextDate.setText(runningPreferences.getString("$distance date", null))
     }
 
     private fun saveRecord(distance: String?) {

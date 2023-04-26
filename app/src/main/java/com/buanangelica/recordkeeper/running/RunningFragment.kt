@@ -37,6 +37,10 @@ class RunningFragment : Fragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        displayRecords()
+    }
     private fun displayRecords() {
         val runningPreferences = requireContext().getSharedPreferences("running", Context.MODE_PRIVATE)
 
